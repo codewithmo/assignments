@@ -58,9 +58,8 @@ let marks = {
 
  function topScorer(studentMarks){
   if (Object.keys(studentMarks).length === 0) return null
-  for (let entry of Object.entries(studentMarks).sort((a,b)=>b[1]-a[1])){
-    return entry[0]
-  } 
+  let entry =  Object.entries(studentMarks).sort((a,b)=>b[1]-a[1]);
+  return entry[0][0]
 }
 let result = topScorer(marks)
 console.log(result)
