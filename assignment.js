@@ -59,14 +59,14 @@ let marks = {
  function topScorer(studentMarks){
   if (Object.keys(studentMarks).length === 0) return null
   for (let entry of Object.entries(studentMarks).sort((a,b)=>b[1]-a[1])){
-    return entry
+    return entry[0]
   } 
 }
 let result = topScorer(marks)
 console.log(result)
 
 // log of result if marks object is not empty
-// [ 'Vijay', 92 ]
+// Vijay
 
 // log of result if marks object is empty
 // null
